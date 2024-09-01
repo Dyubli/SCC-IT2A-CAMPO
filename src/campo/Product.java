@@ -18,9 +18,9 @@ public class Product {
       public void viewProduct() {
           double profit = this.price * this.sold;
           double tep = this.stocks * this.price;
-          String status = ( this.stocks > 0) ? "Avilable" : "Out-of-stock";
+          String status = ( this.stocks > 0) ? " Avilable " : " Out-of-stock ";
                  
-                System.out.printf ("%-10d %-10s %-10.2f %-10d %-10d %10.2f %10.2f %-10s\n",
+                System.out.printf ("\n1%-10d %-10s %-10.2f %-10d %-10d %-10.2f %10.2f %-10s \n",
                         this.id, this.pname, this.price, this.stocks, this.sold, profit , tep, status);
       }
 }
