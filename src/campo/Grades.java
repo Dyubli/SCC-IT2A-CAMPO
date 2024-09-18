@@ -1,42 +1,24 @@
 package campo;
 
-import java.util.Scanner;
-
 public class Grades {
+    int id;
+    String name;
+    double p, m, pf, f;
     
-    public void getGrade(){
-        Scanner input = new Scanner(System.in);
-                
-        String name;
-        int Math,Science,English,Computer;
-        int TotalMarks;
-        float Average;
-        
-        System.out.print("Enter Your Full Name: ");
-            name = input.nextLine();
-        System.out.println("\nEnter Marks In");
-        System.out.print("Math: ");
-            Math = input.nextInt();
-        System.out.print("Science: ");
-            Science = input.nextInt();
-        System.out.print("English: ");
-            English = input.nextInt();
-        System.out.print("Computer: ");
-            Computer = input.nextInt();
-            
-        System.out.println("---------------------");
-        System.out.println("GRADE DETAIL");
-        System.out.println("---------------------");
-        
-        System.out.println("Name: "+name);
-        
-        TotalMarks = Math+Science+English+Computer;
-        
-        System.out.print("Total Marks: "+TotalMarks);
-        
-        float Ave = TotalMarks/4;
-        
-        System.out.println(String.format("\nAverage: %.2f", Ave));
+    public void addGrades(int sid, String sname, double sp, double sm, double spf, double sf){
+        this.id = sid;
+        this.name = sname;
+        this.p = sp;
+        this.m =sm;
+        this.pf = spf;
+        this.f = sf;
     }
-    
-}
+    public void viewGrades(){
+        double average = (this.p + this.m + this.pf + this.f)/4;
+        String remarks = (average > 3.0) ? "Failed" : "Passed";
+        
+        System.out.printf("%-10d %-10s %-10.2f %-10.2f %-10.2f %-10.2f %-10.2f %-10s\n",
+                this.id, this.name, this.p, this.m, this.pf, this.f, average, remarks);
+        
+    }
+}           
