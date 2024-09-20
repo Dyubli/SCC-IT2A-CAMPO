@@ -10,7 +10,6 @@ public class product {
              System.out.print("Enter the number of products: ");
              int nump = sc.nextInt();
              
-             
              for (int i = 0; i < nump; i++) {
                  System.out.println("Enter details of product " + (i + 1) + ":");
                  
