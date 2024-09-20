@@ -1,12 +1,71 @@
+
 package campo;
 
 import java.util.Scanner;
 
 public class Campo {
-    
-    public static void main(String[] args){
 
-        Scanner scanner = new Scanner(System.in);
+   
+    public static void main(String[] args) {
+          //PRODUCT//
+         
+      /* products[] pr = new products[100];
+            
+     Scanner sc = new Scanner(System.in);
+
+       int nump, i;
+
+       System.out.print("Enter the number of products: ");
+       nump = sc.nextInt();
+
+       for (i = 0; i < nump; i++) {
+           System.out.println("Enter details of product " + (i + 1) + ": ");
+            
+           System.out.print("ID: ");
+            int id = sc.nextInt();
+
+          System.out.print("Name: ");
+           String name = sc.next();
+
+          System.out.print("Price: ");
+            double pri = sc.nextDouble();
+
+            System.out.print("Stock: ");
+          /int st = sc.nextInt();
+            
+            System.out.print("Sold: ");
+           int sold = sc.nextInt();
+            
+           products prod = new products();
+           prod.addProduct(id, name, st, pri, sold);
+
+            
+          pr[i] = prod;
+        }
+
+       System.out.println("----------------------");
+        System.out.println("\nProduct Details:/n");
+       System.out.println("----------------------");
+        
+      System.out.printf("%-10s %-20s %-10s %-20s %-20s %-20s %-20s %-20s\n", 
+                      //    "ID", "Name", "Stocks", "Price", "Items Sold", "Total Expected Profit", "Total Profit", "Status");
+        
+       for (i = 0; i < nump; i++) {
+           pr[i].viewProduct();
+        }
+
+        sc.close(); 
+    }
+}
+*/
+      // GRADES//
+     /* 
+        public static void main(String[] args) {
+             Grades grd = new Grades();
+                 grd.getGrade();*/
+     
+     
+      Scanner scanner = new Scanner(System.in);
         
         System.out.print("Enter number of accounts to register: ");
         int numberOfAccounts = scanner.nextInt();
@@ -16,7 +75,7 @@ public class Campo {
 
         for (int i = 0; i < numberOfAccounts; i++) {
             System.out.println("Enter details for account " + (i + 1) + ":");
-
+       
             System.out.print("First Name: ");
             String firstName = scanner.nextLine();
 
@@ -47,11 +106,10 @@ public class Campo {
         }
 
         System.out.println("\nAll registered accounts:");
-        accounts.viewAccounts();
+        accounts.viewAccounts(); 
 
         scanner.close();
-    
     }
 }
-      
+
  
